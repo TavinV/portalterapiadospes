@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --destaque1: #6ED4A5;
+    --destaque2: #4DA57F;
+
+    /* h1 */
+    --font-size-xg: clamp(32px, 4vw, 64px);
+    /* Icones Header */
+    --icon-size: clamp(2rem, 2.8vw, 2.5rem);
+    /* h2 */
+    --font-size-g: clamp(16px, 2vw, 32px);
+    /* h3 */
+    --font-size-m: clamp(12px, 1.5vw, 24px);
+    /* p */
+    --font-size-p: clamp(8px, 1vw, 16px);
+}
+
+* {
+    font-family: "Poppins", serif;
+    box-sizing: border-box;
+    transition: all .3s ease;
+    line-height: 1.6;
+}
+
+body,
+html {
+    padding: 0;
+    overflow-x: hidden;
+}
+
+main {
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+header .logo {
+    height: 60px;
+}
+
+header .logo path {
+    fill: var(--destaque1)
+}
+
+header nav {
+    gap: 100px;
+    display: flex;
+    font-size: var(--font-size-m);
+}
+
+header nav a {
+    color: #000000;
+    text-decoration: none;
+}
+
+header nav .texto-destaque {
+    font-weight: 600;
+    color: var(--destaque2);
+}
+
+header nav a:hover {
+    transform: translateY(-2px);
+    scale: 1.06;
+}
+
+header .header-buttons {
+    display: flex;
+    gap: 30px;
+}
+
+header .header-buttons button {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    font-size: var(--icon-size);
+}
+
+header .header-buttons #hamburger-menu {
+    display: none;
+}
+
+/* Colapsar header */
+
+@media screen and (max-width: 800px) {
+    header .header-buttons #hamburger-menu {
+        display: flex;
+    }
+
+    header nav {
+        position: absolute;
+        right: -250px;
+        top: 100px;
+        flex-direction: column;
+        background-color: var(--destaque1);
+        gap: 30px;
+        padding: 20px;
+        border-radius: 0 0 0 10px;
+    }
+
+    header nav.active {
+        right: 0px;
+    }
+
+    header nav a {
+        font-size: var(--font-size-g);
+        color: white;
+    }
+
+    header nav .texto-destaque {
+        color: white;
+    }
+
+}
+
+/* FOOTER */
+
+footer {
+    position: static;
+    bottom: 0px;
+    left: 0;
+    padding: 0;
+    width: 100%;
+}
+
+footer .social-links {
+    padding: 50px;
+    width: 100%;
+    background-color: var(--destaque2);
+}
+
+footer p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+}
