@@ -1,0 +1,157 @@
+:root {
+    --destaque1: #6ED4A5;
+    --destaque2: #4DA57F;
+
+    /* h1 */
+    --font-size-xg: clamp(32px, 4vw, 64px);
+    /* Icones Header */
+    --icon-size: clamp(2rem, 2.8vw, 2.5rem);
+    /* h2 */
+    --font-size-g: clamp(16px, 2vw, 32px);
+    /* h3 */
+    --font-size-m: clamp(12px, 1.5vw, 24px);
+    /* p */
+    --font-size-p: clamp(8px, 1vw, 16px);
+}
+
+
+.hero {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.hero>div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .collumn-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+h1 {
+    font-size: var(--font-size-xg);
+    color: var(--destaque2);
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: var(--font-size-g);
+    color: #000000e5
+}
+
+.hero button {
+    width: 60%;
+    padding: 20px;
+    font-size: var(--font-size-m);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.hero button:hover {
+    scale: 1.02;
+}
+
+.hero button:active {
+    scale: 1;
+}
+
+.hero #agendar {
+    background-color: var(--destaque1);
+    color: white;
+    font-weight: 700;
+    border: none;
+}
+
+.hero #servicos {
+    background-color: white;
+    font-weight: 700;
+    border: none;
+    color: var(--destaque2);
+    border: 3px solid var(--destaque1);
+}
+
+.buttons-mobile {
+    display: none;
+}
+
+.divisor {
+    width: 100vw;
+    height: 100px;
+    margin: 0 auto;
+    transform: translateX(-40px);
+    background: rgb(110, 212, 165);
+    background: linear-gradient(180deg, rgba(110, 212, 165, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.feedback {
+    margin-top: 300px;
+    background-color: aqua;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero .collumn-left {
+        width: 100%;
+        order: 1;
+        /* Certifica-se de que o título vem primeiro */
+    }
+
+    .hero .collumn-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        order: 2;
+        /* Imagem fica depois do título */
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .hero .collumn-right img {
+        width: 80%;
+        /* Ajusta o tamanho da imagem */
+        height: auto;
+    }
+
+    .hero #agendar,
+    #servicos {
+        display: none;
+    }
+
+    .buttons-mobile {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #agendar_m {
+        width: 100%;
+        background-color: var(--destaque1);
+        color: white;
+        font-weight: 700;
+        border: none;
+    }
+
+    #servicos_m {
+        width: 100%;
+        background-color: white;
+        font-weight: 700;
+        border: none;
+        color: var(--destaque2);
+        border: 3px solid var(--destaque1);
+    }
+}
