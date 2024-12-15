@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Terapia dos Pés 👣</title>
     <link rel="stylesheet" href="stylesheets/main.css">
-    <link rel="stylesheet" href="stylesheets/home.css">
+    <link rel="stylesheet" href="stylesheets/perguntas.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
 </head>
@@ -57,7 +57,37 @@
     </div>
 
     <main>
-        <h2>Perguntas</h2>
+        <div class="title">
+            <h2>Perguntas Frequentes</h2>
+            <h3>Aqui estão algumas dúvidas frequentes em relação à podologia e ao Portal terapia dos pés</h3>
+        </div>
+        <div class="faq-container">
+        <div class="faq-card">
+            <div class="faq-question">
+                <h3>Pergunta um</h3>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+            <div class="faq-answer">
+                <p>Esta é a resposta para a pergunta um. Ela aparece quando o card é expandido.</p>
+                <p>Esta é a resposta para a pergunta um. Ela aparece quando o card é expandido.</p>
+                <p>Esta é a resposta para a pergunta um. Ela aparece quando o card é expandido.</p>
+                <p>Esta é a resposta para a pergunta um. Ela aparece quando o card é expandido.</p>
+                <p>Esta é a resposta para a pergunta um. Ela aparece quando o card é expandido.</p>
+                <p>Esta é a resposta para a pergunta um. Ela aparece quando o card é expandido.</p>
+                <p>Esta é a resposta para a pergunta um. Ela aparece quando o card é expandido.</p>
+                <p>Esta é a resposta para a pergunta um. Ela aparece quando o card é expandido.</p>
+            </div>
+        </div>
+        <div class="faq-card">
+            <div class="faq-question">
+                <h3>Pergunta dois</h3>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+            <div class="faq-answer">
+                <p>Esta é a resposta para a pergunta dois. Ela aparece quando o card é expandido.</p>
+            </div>
+        </div>
+    </div>
     </main>
     <footer>
         <div class="social-links">
@@ -103,6 +133,16 @@
             </p> 
         </div>
     </footer>
+    <script>
+        const faqCards = document.querySelectorAll('.faq-card');
+
+        faqCards.forEach(card => {
+            const question = card.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                card.classList.toggle('active');
+            });
+        });
+    </script>
 
     <script src="src/searchBar.js"></script>
     <script src="src/headerButtons.js"></script>

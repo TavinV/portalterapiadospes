@@ -1,0 +1,168 @@
+:root {
+    --destaque1: #6ED4A5;
+    --destaque2: #4DA57F;
+
+    /* h1 */
+    --font-size-xg: clamp(32px, 4vw, 64px);
+    /* Icones Header */
+    --icon-size: clamp(2rem, 2.8vw, 2.5rem);
+    /* h2 */
+    --font-size-g: clamp(16px, 2vw, 32px);
+    /* h3 */
+    --font-size-m: clamp(16px, 1.5vw, 24px);
+    /* p */
+    --font-size-p: clamp(10px, 1vw, 16px);
+}
+
+main {
+    margin-top: 90px;
+    padding: 0 40px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow-y: visible;
+}
+
+.banner {
+    margin-top: 30px;
+    width: 100vw;
+    transform: translateX(-40px);
+    size: 100% 100%;
+}
+
+.titles {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.titles h1 {
+    font-size: var(--font-size-g);
+}
+
+.titles p {
+    font-size: var(--font-size-m);
+}
+
+.titleServicos {
+    color: var(--destaque2);
+}
+
+.subServicos {
+    margin-top: -20px;
+    font-weight: 450;
+}
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    gap: 30px;
+}
+
+
+/* Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    width: 500px;
+    background-color: #F5F5F5;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.123),
+        0px 5px 5px rgba(0, 0, 0, 0.123);
+
+}
+
+.servico-info {
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+}
+
+.servico-info p {
+    font-size: var(--font-size-m);
+    padding: 20px 0;
+}
+
+.imageCard {
+    width: 100%;
+    height: 500px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+
+.buttonServico {
+    position: relative;
+    margin-top: -8px;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttonServico:hover {
+    background-color: #1aaa4f;
+}
+
+.whatsappIcon {
+    position: absolute;
+    left: 10px;
+}
+
+.buttonServico2 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.144);
+}
+
+@media (max-width: 500px) {
+
+    .banner {
+        margin-top: 0px;
+        content: url(../img/banner/bannerMob.png);
+    }
+
+    .flexContainer {
+        margin-top: 30px;
+    }
+
+    .servico-info {
+        height: auto;
+    }
+
+    .imageCard {
+        height: auto;
+    }
+
+    .servico-info p {
+        padding: 15px 0;
+    }
+
+}
+
+@media (max-width: 1393px) {
+
+    .titles {
+        text-align: center;
+    }
+
+    .flexContainer {
+        justify-content: center;
+    }
+
+}
