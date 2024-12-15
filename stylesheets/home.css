@@ -14,6 +14,14 @@
     --font-size-p: clamp(8px, 1vw, 16px);
 }
 
+main {
+    margin-top: 100px;
+    padding: 0 40px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    height: 250vh;
+}
 
 .hero {
     margin-top: 30px;
@@ -82,17 +90,79 @@ h2 {
 }
 
 .divisor {
+    transform: translateX(-40px);
     width: 100vw;
     height: 100px;
     margin: 0 auto;
-    transform: translateX(-40px);
     background: rgb(110, 212, 165);
     background: linear-gradient(180deg, rgba(110, 212, 165, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .feedback {
-    margin-top: 300px;
-    background-color: aqua;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: max-content;
+}
+
+.feedback-carrousel {
+    display: flex;
+    margin-top: 100px;
+    gap: 10px;
+    overflow-x: hidden;
+}
+
+.feedback-carrousel .feedback-card {
+    background-color: white;
+    border: 2px solid rgb(255, 210, 63);
+    padding: 15px;
+    border-radius: 10px;
+    width: 90vw;
+    max-width: 450px;
+    flex-shrink: 0;
+    /* Garante que os cards não encolham */
+}
+
+.feedback-card>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback-card .stars {
+    color: rgb(255, 210, 63);
+    font-size: var(--font-size-g);
+}
+
+.feedback-card h3 {
+    display: inline-block;
+    font-size: var(--font-size-g);
+}
+
+.feedback-card h4 {
+    font-weight: 500;
+    line-break: auto;
+    font-size: var(--font-size-m);
+}
+
+/* Efeito de animação para rolagem infinita */
+.feedback-carrousel {
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.feedback-carrousel:hover {
+    animation-play-state: paused;
 }
 
 
@@ -154,4 +224,13 @@ h2 {
         color: var(--destaque2);
         border: 3px solid var(--destaque1);
     }
+
+    .feedback-carrousel {
+        white-space: wrap;
+    }
+
+    .feedback-card {
+        width: 90vw;
+    }
+
 }

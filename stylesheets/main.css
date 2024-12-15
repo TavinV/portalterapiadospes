@@ -29,11 +29,15 @@ html {
     /* Remove margens padrão */
     padding: 0;
     /* Remove padding padrão */
-    height: 100%;
     /* Garante que o body ocupe toda a altura da tela */
     overflow-x: hidden;
     /* Evita barras de rolagem horizontais */
 }
+
+
+/* Animação de entrada */
+
+
 
 /* main {
     margin-top: 130px;
@@ -308,7 +312,7 @@ footer {
     right: 0;
     padding: 0;
     width: 100vw;
-    margin-top: 200px;
+    margin-top: 0px;
     background-color: var(--destaque2);
 }
 
