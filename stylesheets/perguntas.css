@@ -24,7 +24,7 @@ main {
 
 .title {
     width: 90vw;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 }
 
 .title h2 {
@@ -41,7 +41,6 @@ main {
 
 
 .faq-container {
-    max-width: 1400px;
     width: calc(100vw - 80px);
     margin: 20px auto;
     background-color: #fff;
@@ -89,13 +88,13 @@ main {
     max-height: 0;
     padding: 0 20px;
     background-color: #f1f1f1;
-    font-size: var(--font-size-p);
+    font-size: var(--font-size-m);
     color: #333;
     line-height: 1.5;
-    transition: all 0.3s ease-in-out, padding 0.3s;
+    transition: all .1s ease;
 }
 
 .faq-card.active .faq-answer {
-    max-height: 250px;
+    max-height: 700px;
     padding: 10px 20px;
 }

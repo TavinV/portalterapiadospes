@@ -68,73 +68,68 @@
 
         <div class="flexContainer">
 
-            <div class="card">
+            <div id="remocao_calosidades" class="card">
                 <img class="imageCard" src="img/servicos/remocaoCalosidades.png" alt="">
                 <div class="servico-info">
                     <p class="servicoNome">Tratamento para remoção de hiperqueratose, e outras calosidades no plantar</p>
-                    <button class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
+                    <button onclick="contato('remocao_calosidades')" class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
                 </div>
 
             </div>
 
-            <div class="card">
+            <div id="tratamento_onicomicose" class="card">
                 <img class="imageCard" src="img/servicos/Onicomicose.png" alt="">
                 <div class="servico-info">
                     <p class="servicoNome">Tratamento para onicomicose (micoses nas unhas)</p>
-                    <button class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
+                    <button onclick="contato('tratamento_onicomicose')" class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
                 </div>
 
             </div>
 
-            <div class="card">
+            <div id="reflexologia_podal" class="card">
                 <img class="imageCard" src="img/servicos/reflexoPodal.png" alt="">
                 <div class="servico-info">
                     <p class="servicoNome">Tratamento baseado em pontos de pressão nos pés</p>
-                    <button class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
+                    <button onclick="contato('reflexologia_podal')" class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
                 </div>
 
             </div>
 
-            <div class="card">
+            <div id="tratamento_ortese_ungueal" class="card">
                 <img class="imageCard" src="img/servicos/orteseUngueal.png" alt="">
                 <div class="servico-info">
                     <p class="servicoNome">Tratamento órtese ungueal (indicado para unhas encravadas e curvadas)</p>
-                    <button class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
+                    <button onclick="contato('tratamento_ortese_ungueal')" class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
                 </div>
 
             </div>
 
-            <div class="card">
+            <div id="" class="card">
                 <img class="imageCard" src="img/servicos/VerrugaPlantar.png" alt="">
                 <div class="servico-info">
                     <p class="servicoNome">Tratamento de verruga plantar, calos interdigitais, bicho de pé, olho de peixe</p>
-                    <button class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
+                    <button onclick="contato('tratamento_verruga_plantar')" class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
                 </div>
 
             </div>
 
-            <div class="card">
+            <div id="manicure" class="card">
                 <img class="imageCard" src="img/servicos/manicure.png" alt="">
                 <div class="servico-info">
                     <p class="servicoNome">Manicure Tradicional</p>
-                    <button class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
+                    <button onclick="contato('manicure')" class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
                 </div>
 
             </div>
 
-            <div class="card">
+            <div id="peeling_ungueal" class="card">
                 <img class="imageCard" src="img/servicos/peeling.png" alt="">
                 <div class="servico-info">
                     <p class="servicoNome">Remoção da pele endurecida e as camadas superficiais da unha. </p>
-                    <button class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
+                    <button onclick="contato('peeling_ungueal')" class="buttonServico"><img class="whatsappIcon" width="27px" src="img/whatsapp.png" alt=""> <p class="buttonServico2">Agendar</p> </button>
                 </div>
             </div>
-
-
         </div>
-
-
-
     </main>
     <footer>
         <div class="social-links">
@@ -181,6 +176,27 @@
         </div>
     </footer>
 
+    <script>
+
+        window.onload = function() {
+            // Recupera a query da URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const tratamento = urlParams.get('q');  // Por exemplo, 'remocao_calosidades'
+            // Verifica se o tratamento especificado existe e rola para a seção correspondente
+            if (tratamento) {
+                const tratamentoElement = document.getElementById(tratamento);
+                if (tratamentoElement) {
+                    // Delay de 500ms antes de rolar para o tratamento
+                    setTimeout(() => {
+                        tratamentoElement.scrollIntoView({ behavior: 'smooth' });
+                    }, 500); // Delay de 500ms
+
+                }
+            }
+        }
+    </script>
+
+    <script src="src/mensagens.js"></script>
     <script src="src/searchBar.js"></script>
     <script src="src/headerButtons.js"></script>
 </body>

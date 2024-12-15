@@ -215,6 +215,8 @@ header nav .search {
         width: 100%;
         padding: 20px;
         left: 0;
+        display: none;
+        pointer-events: none;
         z-index: 1;
         border-radius: 0 0 0 10px;
         top: 95px;
@@ -222,7 +224,9 @@ header nav .search {
     }
 
     header nav.active {
+        pointer-events: all;
         opacity: 100%;
+        display: flex;
     }
 
     header nav a {

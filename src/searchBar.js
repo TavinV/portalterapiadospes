@@ -4,7 +4,7 @@ let servicos = {
     "reflexologia podal": "reflexologia_podal",
     "tratamento ortese ungueal": "tratamento_ortese_ungueal",
     "tratamento verruga plantar": "tratamento_verruga_plantar",
-    "manicure": "#manicure",
+    "manicure": "manicure",
     "peeling ungueal": "peeling_ungueal"
 }
 function capitalizeTexto(texto) {
@@ -16,7 +16,7 @@ function capitalizeTexto(texto) {
 }
 
 function criarLinkServico(servico) {
-    return `<li> <a target="_blank" href="../servicos.html?q=${servicos[servico]}">${capitalizeTexto(servico)}</a> </li>`;
+    return `<li> <a href="../servicos.html?q=${servicos[servico]}">${capitalizeTexto(servico)}</a> </li>`;
 }
 
 // Barra de pesquisa do PC
