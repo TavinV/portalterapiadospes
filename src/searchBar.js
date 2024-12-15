@@ -1,11 +1,11 @@
 let servicos = {
-    "remoção de calosidades": "#remocao_calosidades",
-    "tratamento de onicomicose": "#tratamento_onicomicose",
-    "reflexologia podal": "#reflexologia_podal",
-    "tratamento ortese ungueal": "#tratamento_ortese_ungueal",
-    "tratamento verruga plantar": "#tratamento_verruga_plantar",
+    "remoção de calosidades": "remocao_calosidades",
+    "tratamento de onicomicose": "tratamento_onicomicose",
+    "reflexologia podal": "reflexologia_podal",
+    "tratamento ortese ungueal": "tratamento_ortese_ungueal",
+    "tratamento verruga plantar": "tratamento_verruga_plantar",
     "manicure": "#manicure",
-    "peeling ungueal": "#peeling_ungueal"
+    "peeling ungueal": "peeling_ungueal"
 }
 function capitalizeTexto(texto) {
     return texto
@@ -15,6 +15,9 @@ function capitalizeTexto(texto) {
         .join(' '); // Junta as palavras de volta
 }
 
+function criarLinkServico(servico) {
+    return `<li> <a target="_blank" href="../servicos.html?q=${servicos[servico]}">${capitalizeTexto(servico)}</a> </li>`;
+}
 
 // Barra de pesquisa do PC
 
@@ -34,7 +37,7 @@ barraDePesquisa.addEventListener('input', () => {
         );
 
         for (const resultado of resultados) {
-            resultadosEL.innerHTML += `<li><a href="${servicos[resultado]}">${capitalizeTexto(resultado)}</a></li>`
+            resultadosEL.innerHTML += criarLinkServico(resultado);
         }
 
     }
@@ -59,7 +62,7 @@ barraDePesquisaMobile.addEventListener("input", () => {
         );
 
         for (const resultado of resultados) {
-            resultadosUL_EL.innerHTML += `<li><a href="${servicos[resultado]}">${capitalizeTexto(resultado)}</a></li>`
+            resultadosUL_EL.innerHTML += criarLinkServico(resultado)
         }
     }
 })
