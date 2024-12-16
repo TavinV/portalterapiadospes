@@ -337,6 +337,11 @@ footer .social-links a {
     display: flex;
     align-items: center;
     color: white;
+    transition: all .2s ease;
+}
+
+footer .social-links a:hover {
+    scale: 1.05;
 }
 
 footer .copyright {
