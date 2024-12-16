@@ -329,7 +329,7 @@ footer .social-links {
     flex-wrap: wrap;
 }
 
-footer .social-links p {
+footer .social-links span .complementary_link {
     display: none;
 }
 
@@ -347,6 +347,21 @@ footer .copyright {
     bottom: 0;
     color: var(--destaque2);
     background-color: white;
+}
+
+footer .address {
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    padding: 0px 0px 20px 0px;
+    bottom: 0;
+    color: white;
+    font-size: 1.3em;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 380px) {
@@ -367,13 +382,13 @@ footer .copyright {
         font-weight: 500;
     }
 
-    footer .social-links p {
+    footer .social-links span .complementary_link {
         display: block;
     }
 }
 
 @media screen and (max-width: 310px) {
-    footer .social-links p {
+    footer .social-links span .complementary_link {
         display: none;
     }
 
