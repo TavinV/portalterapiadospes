@@ -16,7 +16,7 @@ function capitalizeTexto(texto) {
 }
 
 function criarLinkServico(servico) {
-    return `<li> <a href="../servicos.html?q=${servicos[servico]}">${capitalizeTexto(servico)}</a> </li>`;
+    return `<li> <a href="https://tavinv.github.io/portalterapiadospes/servicos.html?q=${servicos[servico]}">${capitalizeTexto(servico)}</a> </li>`;
 }
 
 // Barra de pesquisa do PC
